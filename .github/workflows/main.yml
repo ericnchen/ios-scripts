@@ -25,4 +25,4 @@ jobs:
       env:
         PUSHCUT_API_KEY: ${{ secrets.PUSHCUT_API_KEY }}
       run: |
-        curl -X POST -H "Content-Type: application/json" -H "API-Key: $env.PUSHCUT_API_KEY" -d '{"title": "Hello World", "text": "Hello World"}' https://api.pushcut.io/v1/notifications/Webhook
+        curl -X POST -H "Content-Type: application/json" -H 'API-Key: "$PUSHCUT_API_KEY"' -d '{"title": "Hello World", "text": "Hello World"}' https://api.pushcut.io/v1/notifications/Webhook
